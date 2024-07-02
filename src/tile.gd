@@ -17,6 +17,21 @@ var COLORS = {
 	"2048": Color.hex(0xedc22eff),
 }
 
+var IMGS = {
+	"0": Color.hex(0x4c4c4cff),
+	"2": Color.hex(0xeee4daff),
+	"4": Color.hex(0xeee1c9ff),
+	"8": Color.hex(0xf3b27aff),
+	"16": Color.hex(0xf69664ff),
+	"32": Color.hex(0xf77c5fff),
+	"64": Color.hex(0xf75f3bff),
+	"128": Color.hex(0xedd073ff),
+	"256": Color.hex(0xedcc62ff),
+	"512": Color.hex(0xedc950ff),
+	"1024": Color.hex(0xedc53fff),
+	"2048": Color.hex(0xedc22eff),
+}
+
 @export var value: int :
 	set(new_value):
 		value = new_value
@@ -35,6 +50,8 @@ func update() -> void:
 		$Number.add_theme_color_override("font_color", Color.WHITE)
 	
 	$Number.text = str(value)
+	
+	
 
 func destroy() -> void:
 	var tween = create_tween()
